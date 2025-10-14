@@ -66,11 +66,13 @@ flowchart LR
     A[AB Tasty Vars<br>] --> B[Tag Manager / Custom HTML Snippet]
     B --> C[Celebrus EQ JS window.CelebrusEQ</a>]
 
-    %% Real-time data flow arrow
-    A ---|Real-time data via AB Tasty code and Connector| C
+    %% Create a dummy node for the label
+    R["Real-time data via AB Tasty code and Connector"]:::highlight
+    A --- R
+    R --- C
 
-    %% Highlight the arrow
-    linkStyle 2 stroke:#ff3,stroke-width:4px,stroke-dasharray: 5 5
+    %% Style the label node
+    classDef highlight fill:#ffeb3b,stroke:#333,stroke-width:1px,color:#000,font-weight:bold;
 ```
 
 
