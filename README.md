@@ -67,7 +67,10 @@ flowchart LR
     B --> C[Celebrus EQ JS window.CelebrusEQ</a>]
 
     %% Real-time data flow arrow
-    A ---|**Real-time data via AB Tasty code and Connector**| C
+    A ---|Real-time data via AB Tasty code and Connector| C
+
+    %% Highlight the arrow
+    linkStyle 2 stroke:#ff3,stroke-width:4px,stroke-dasharray: 5 5
 ```
 
 
