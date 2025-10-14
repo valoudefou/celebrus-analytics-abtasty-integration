@@ -39,6 +39,17 @@ if (window.CelebrusEQ) {
   });
 }
 ```
+- AB Tasty experiment information (`campaignId`, `variationId`, etc.) is successfully injected into the payload.
+- The network string is intentionally obfuscated; do not expect human-readable JSON.
+- Cookies like `veryv9csacdPersisted` ensure consistent tracking of the same visitor across sessions, which is crucial for valid experimentation analytics.
+- The `CelebrusEQ.send` API fires an event payload to your back-end collector.
+- In the Network tab, you may see an obfuscated string like:
+
+```
+z=_1a0e2bf27c854f35…&y=99715544900!903!E=54892962=1590!aaDx+…
+```
+
+- This is Celebrus’ encoding mechanism: it compresses and encrypts event and session data into a single query string. This is standard for production traffic and ensures a minimal footprint and secure transport.
 
 **Notes:**
 
