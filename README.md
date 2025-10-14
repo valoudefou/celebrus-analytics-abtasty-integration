@@ -27,7 +27,7 @@ This integration captures AB Tasty experiment exposures and pushes them to the *
 
 ## Implementation Snippet
 
-For guidance on where to place code in AB Tasty, see [AB Tasty Universal Connector](https://docs.abtasty.com/integrations/custom-integrations/custom-integration-connector-with-a-rd-party-tool-push-data).
+Insert the following code wherever both AB Tasty template variables and Celebrus library are available. For guidance on where to place code in AB Tasty, see [AB Tasty Custom Code Integration](https://help.abtasty.com/hc/en-us/articles/360013092839-Custom-JavaScript-in-your-campaigns).
 
 ```javascript
 if (window.CelebrusEQ) {
@@ -50,18 +50,13 @@ if (window.CelebrusEQ) {
 
 ## Data Flow Diagram
 
-```text
-+----------------+         +----------------+         +------------------+
-|                |         |                |         |                  |
-| AB Tasty       |  ---->  | Tag Manager /  |  ---->  | Celebrus EQ JS   |
-| Template Vars  |         | Custom HTML    |         | (window.CelebrusEQ)|
-| {{campaignId}} |         | Snippet        |         |                  |
-| {{variationId}}|         |                |         |                  |
-+----------------+         +----------------+         +------------------+
-        |                         |                           |
-        |                         |                           |
-        |------------------------->-------------------------->|
-                         Data pushed in real-time
+```mermaid
+flowchart LR
+    A[AB Tasty Template Vars<br>{{campaignId}}, {{variationId}}] --> B[Tag Manager / Custom HTML Snippet]
+    B --> C[<a href="https://docs.celebrus.com/js-library" target="_blank">Celebrus EQ JS (window.CelebrusEQ)</a>]
+
+    %% Real-time data flow arrow
+    A ---|Data pushed in real-time| C
 ```
 
 ---
