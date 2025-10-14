@@ -1,5 +1,4 @@
-# AB Tasty → Celebrus Integration (Template Version)
-
+# AB Tasty → Celebrus Integration
 ## Overview
 
 This integration captures AB Tasty experiment exposures and pushes them to the **Celebrus Data Collection platform** using template variables. It is designed for use in tag managers or other environments where AB Tasty template variables are available (`{{campaignId}}`, `{{campaignName}}`, etc.).
