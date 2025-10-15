@@ -27,7 +27,7 @@ This integration captures AB Tasty experiment exposures and pushes them to the *
 
 ## Implementation Snippet
 
-Insert the following code wherever both AB Tasty template variables and Celebrus library are available. For guidance on where to place code in AB Tasty, see [AB Tasty Custom Code Integration](https://help.abtasty.com/hc/en-us/articles/360013092839-Custom-JavaScript-in-your-campaigns).
+Insert the following code wherever both AB Tasty template variables and Celebrus library are available. For guidance on where to place code in AB Tasty, see [AB Tasty Universal Connector](https://docs.abtasty.com/integrations/custom-integrations/custom-integration-connector-with-a-rd-party-tool-push-data).
 
 ```javascript
 if (window.CelebrusEQ) {
